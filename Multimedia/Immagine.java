@@ -25,6 +25,7 @@ public class Immagine extends Multimedia implements Luminosità, Show {
             asterisco = asterisco + "*";
         }
         System.out.println(this.titolo + asterisco);
+        System.out.println(" ");
     }
 
     @Override

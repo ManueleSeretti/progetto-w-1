@@ -21,6 +21,7 @@ public class Audio extends Multimedia implements Volume, Play {
         for (int i = 0; i < this.durata; i++) {
             System.out.println(this.titolo + punti);
         }
+        System.out.println(" ");
 
     }
 

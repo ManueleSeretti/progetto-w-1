@@ -36,7 +36,7 @@ public class Video extends Multimedia implements Volume, Play, Luminosità {
         for (int i = 0; i < this.durata; i++) {
             System.out.println(this.titolo + punti + asterisco);
         }
-
+        System.out.println(" ");
     }
 
     @Override

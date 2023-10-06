@@ -24,6 +24,7 @@ public class Main {
                     int lum = Integer.parseInt(input.nextLine());
                     myArray[i] = new Immagine(titolo, lum);
                     System.out.println("... elemento creato ... ");
+                    System.out.println("                         ");
                     break;
                 }
                 case 2: {
@@ -35,6 +36,7 @@ public class Main {
                     int vol = Integer.parseInt(input.nextLine());
                     myArray[i] = new Audio(titolo, dur, vol);
                     System.out.println("... elemento creato ... ");
+                    System.out.println("                         ");
                     break;
                 }
                 case 3: {
@@ -44,10 +46,11 @@ public class Main {
                     int dur = Integer.parseInt(input.nextLine());
                     System.out.println("inserisci il volume del video");
                     int vol = Integer.parseInt(input.nextLine());
-                    System.out.println("inserisci il volume del video");
+                    System.out.println("inserisci la luminosità del video");
                     int lum = Integer.parseInt(input.nextLine());
                     myArray[i] = new Video(titolo, dur, vol, lum);
                     System.out.println("... elemento creato ... ");
+                    System.out.println("                         ");
                     break;
                 }
 
@@ -57,6 +60,7 @@ public class Main {
         }
         for (Multimedia el : myArray) {
             System.out.println(el);
+            System.out.println(" ");
         }
 
 
