@@ -23,7 +23,7 @@ public class Main {
                     System.out.println("inserisci la luminosita dell'immagine");
                     int lum = Integer.parseInt(input.nextLine());
                     myArray[i] = new Immagine(titolo, lum);
-                    System.out.println("... elemento creato ... ");
+                    System.out.println("Elemento creato : " + myArray[i]);
                     System.out.println("                         ");
                     break;
                 }
@@ -35,7 +35,7 @@ public class Main {
                     System.out.println("inserisci il volume dell'audio");
                     int vol = Integer.parseInt(input.nextLine());
                     myArray[i] = new Audio(titolo, dur, vol);
-                    System.out.println("... elemento creato ... ");
+                    System.out.println("Elemento creato : " + myArray[i]);
                     System.out.println("                         ");
                     break;
                 }
@@ -49,8 +49,13 @@ public class Main {
                     System.out.println("inserisci la luminosità del video");
                     int lum = Integer.parseInt(input.nextLine());
                     myArray[i] = new Video(titolo, dur, vol, lum);
-                    System.out.println("... elemento creato ... ");
+                    System.out.println("Elemento creato : " + myArray[i]);
                     System.out.println("                         ");
+                    break;
+                }
+                default: {
+                    System.out.println("hai inserito un valore errato ....");
+                    i--;
                     break;
                 }
 
@@ -58,14 +63,15 @@ public class Main {
             }
 
         }
-        for (Multimedia el : myArray) {
-            System.out.println(el);
-            System.out.println(" ");
-        }
-
-
         while (true) {
-            System.out.println("scegli quale elemento riprodurre...");
+            System.out.println("ELENCO DEGLI ELEMENTI CREATI:");
+            for (int i = 0; i < myArray.length; i++) {
+                int c = i + 1;
+                System.out.println(i + " - " + myArray[i]);
+
+            }
+            System.out.println(" ");
+            System.out.println("scegli quale elemento riprodurre... scrivi 0 se vuoi chiudere il programma!");
 
             int scelta = Integer.parseInt(input.nextLine());
 
