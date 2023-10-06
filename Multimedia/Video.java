@@ -49,4 +49,14 @@ public class Video extends Multimedia implements Volume, Play, Luminosità {
         this.volume--;
 
     }
+
+    @Override
+    public String toString() {
+        return "Video{" +
+                "Titolo=" + titolo +
+                ", volume=" + volume +
+                ", luminosità=" + luminosità +
+                ", durata=" + durata +
+                '}';
+    }
 }

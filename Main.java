@@ -8,9 +8,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Multimedia[] myArrey = new Multimedia[5];
+        Multimedia[] myArray = new Multimedia[5];
 
-        for (Multimedia elemento : myArrey) {
+        for (int i = 0; i < myArray.length; i++) {
 
             System.out.println("inserisci il tipo di elemento da creare: ");
             System.out.println("1-IMMAGINE ");
@@ -22,7 +22,7 @@ public class Main {
                     String titolo = input.nextLine();
                     System.out.println("inserisci la luminosita dell'immagine");
                     int lum = Integer.parseInt(input.nextLine());
-                    elemento = new Immagine(titolo, lum);
+                    myArray[i] = new Immagine(titolo, lum);
                     System.out.println("... elemento creato ... ");
                     break;
                 }
@@ -33,7 +33,7 @@ public class Main {
                     int dur = Integer.parseInt(input.nextLine());
                     System.out.println("inserisci il volume dell'audio");
                     int vol = Integer.parseInt(input.nextLine());
-                    elemento = new Audio(titolo, dur, vol);
+                    myArray[i] = new Audio(titolo, dur, vol);
                     System.out.println("... elemento creato ... ");
                     break;
                 }
@@ -46,7 +46,7 @@ public class Main {
                     int vol = Integer.parseInt(input.nextLine());
                     System.out.println("inserisci il volume del video");
                     int lum = Integer.parseInt(input.nextLine());
-                    elemento = new Video(titolo, dur, vol, lum);
+                    myArray[i] = new Video(titolo, dur, vol, lum);
                     System.out.println("... elemento creato ... ");
                     break;
                 }
@@ -55,7 +55,34 @@ public class Main {
             }
 
         }
+        for (Multimedia el : myArray) {
+            System.out.println(el);
+        }
 
 
+        while (true) {
+            System.out.println("scegli quale elemento riprodurre...");
+
+            int scelta = Integer.parseInt(input.nextLine());
+
+            if (scelta == 0) {
+                System.out.println("...FINE...");
+                break;
+            }
+            if (scelta > 5 || scelta < 0) {
+                System.out.println("hai inserito un valore non valido...");
+                continue;
+            }
+            scelta--;
+            if (myArray[scelta] instanceof Immagine) {
+                ((Immagine) myArray[scelta]).show();
+            } else if (myArray[scelta] instanceof Audio) {
+                ((Audio) myArray[scelta]).play();
+            } else if (myArray[scelta] instanceof Video) {
+                ((Video) myArray[scelta]).play();
+            }
+
+        }
+        input.close();
     }
 }

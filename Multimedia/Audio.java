@@ -35,4 +35,13 @@ public class Audio extends Multimedia implements Volume, Play {
     public void lessVolume() {
         this.volume--;
     }
+
+    @Override
+    public String toString() {
+        return "Audio{" +
+                "Titolo=" + titolo +
+                ", durata=" + durata +
+                ", volume=" + volume +
+                '}';
+    }
 }
