@@ -1,13 +1,14 @@
-import Multimedia.Audio;
+import Multimedia.Immagine;
 
 public class Main {
     public static void main(String[] args) {
 
 
-        Audio x = new Audio("nome", 3, 2);
+        Immagine x = new Immagine("nome", 3);
+
+        x.lessLuminosità();
+        x.show();
 
 
-        x.moreVolume();
-        x.play();
     }
 }
