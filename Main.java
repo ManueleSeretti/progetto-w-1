@@ -67,7 +67,7 @@ public class Main {
             System.out.println("ELENCO DEGLI ELEMENTI CREATI:");
             for (int i = 0; i < myArray.length; i++) {
                 int c = i + 1;
-                System.out.println(i + " - " + myArray[i]);
+                System.out.println(c + " - " + myArray[i]);
 
             }
             System.out.println(" ");
